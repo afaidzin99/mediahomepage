@@ -7,11 +7,12 @@ import { buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import sosmedData from "@/data/sosmed.json";
+import { Instagram } from "lucide-react";
 
 export default function HomepageHero() {
   return (
     <div id="homepage-hero" className="relative">
-      <div id="hero-image" className="h-[740px] relative">
+      <div id="hero-image" className="h-[650px] relative">
         <img
           src="/hero.webp"
           alt="Media Sawocangkring"
@@ -21,7 +22,7 @@ export default function HomepageHero() {
       </div>
       <section
         id="hero-content"
-        className="flex justify-center items-center w-full absolute top-0 min-h-[740px]"
+        className="flex justify-center items-center w-full absolute top-0 min-h-[650px]"
       >
         <div className="container mx-auto px-6">
           <div className="flex flex-col items-center -mt-20 bg-no-repeat py-3">
@@ -89,21 +90,17 @@ export default function HomepageHero() {
                       className="group bg-white bg-opacity-5 backdrop-filter backdrop-blur-sm rounded-lg group cursor-pointer border-l border-t border-transparent hover:bg-opacity-10 hover:border-white hover:border-opacity-10 transition-all ease-brand duration-250"
                       title={sosmed.media}
                     >
-                      <img
-                        src={sosmed.url}
-                        alt={sosmed.media}
-                        className="w-6 h-6 filter blur-sm opacity-50"
-                      />
+                      <Instagram color="#ffffff" size={32} />
                     </div>
                   </Link>
                 </li>
               ))}
             </ul>
-            <p className="text-gray-300 font-medium leading-relaxed text-center max-w-xl lg:max-w-2xl mb-4 md:mb-7 text-sm md:text-base mt-6">
+            {/* <p className="text-gray-300 font-medium leading-relaxed text-center max-w-xl lg:max-w-2xl mb-4 md:mb-7 text-sm md:text-base mt-6">
               Disclaimer: Media Sawocangkring tidak dikelola oleh pemerintah
               desa Sawocangkring. Media Sawocangkring dikelola oleh pemuda desa
               Sawocangkring.
-            </p>
+            </p> */}
           </div>
         </div>
       </section>

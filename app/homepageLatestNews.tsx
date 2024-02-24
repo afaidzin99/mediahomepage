@@ -10,7 +10,6 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import latestNews from "@/data/berita.json";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-import Image from "next/image";
 
 interface FeaturedArticleProps {
   id: string;
@@ -29,11 +28,7 @@ export default function HomepageLatestNews() {
             <CardTitle className="text-center text-3xl font-bold">
               Berita Terkini
             </CardTitle>
-            <CardDescription className="flex justify-center items-center">
-              <Button asChild variant={"outline"} className="text-green-700">
-                <Link href={"/berita"}>Baca berita lainnya </Link>
-              </Button>
-            </CardDescription>
+            <CardDescription className="flex justify-center items-center"></CardDescription>
           </CardHeader>
           <CardContent>
             {latestNews
@@ -51,6 +46,11 @@ export default function HomepageLatestNews() {
               ))}
             <LatestNews />
           </CardContent>
+          <CardFooter>
+            <Button asChild variant={"default"} className="w-full">
+              <Link href={"/berita"}>Baca berita lainnya </Link>
+            </Button>
+          </CardFooter>
         </Card>
       </div>
     </section>
@@ -97,7 +97,7 @@ export const FeaturedArticle: React.FC<FeaturedArticleProps> = ({
   return (
     <Card className="relative overflow-hidden">
       <div id="hero-image" className="relative">
-        <AspectRatio ratio={4 / 5}>
+        <AspectRatio ratio={1 / 1}>
           <img
             src="/hero.webp"
             alt="Media Sawocangkring"
@@ -107,7 +107,7 @@ export const FeaturedArticle: React.FC<FeaturedArticleProps> = ({
         <div className="absolute inset-0 bg-gradient-to-r from-green-800 to-blue-800 mix-blend-multiply" />
         <Card className="border-0 visible inline-block absolute bottom-0 w-full bg-black bg-opacity-50 transition duration-500 ease-in-out group-hover:bg-opacity-70 backdrop-filter backdrop-blur-lg rounded-lg px-8 py-6 text-white">
           <div className="flex flex-col gap-2">
-            <p className="text-xl font-semibold line-clamp-2">{title}</p>
+            <p className="text-lg font-semibold line-clamp-2">{title}</p>
             <p className="text-xs">{category}</p>
             <Button asChild variant={"default"} className="w-full">
               <Link href={instagramURL ? instagramURL : `/berita/${id}`}>
