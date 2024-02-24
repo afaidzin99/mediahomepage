@@ -4,6 +4,7 @@ import "./globals.css";
 import Footer from "./footer";
 import type { Viewport } from "next";
 import Header from "./header";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const viewport: Viewport = {
   themeColor: "#051B2E",
@@ -33,6 +34,16 @@ export const metadata: Metadata = {
       url: "https://renggaprakosonugroho.my.id",
     },
   ],
+  robots: "index, follow",
+  openGraph: {
+    title: "Media Sawocangkring",
+    description:
+      "Media Informasi Seputar Desa Sawocangkring. Diramut arek-arek Sawocangkring.",
+    type: "website",
+    url: "https://sawocangkring.my.id",
+    siteName: "Media Sawocangkring",
+  },
+  metadataBase: new URL("https://sawocangkring.my.id"),
 };
 
 export default function RootLayout({
@@ -47,6 +58,7 @@ export default function RootLayout({
         {children}
         <Footer />
       </body>
+      <GoogleAnalytics gaId="G-DTRBLY6MY9" />
     </html>
   );
 }
