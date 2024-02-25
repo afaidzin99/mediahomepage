@@ -5,6 +5,7 @@ import MdxRender from "@/app/mdx-render";
 import Link from "next/link";
 import { ChevronLeft } from "lucide-react";
 import type { Metadata, ResolvingMetadata } from "next";
+import { Article, WithContext } from "schema-dts";
 
 type MetadataProps = {
   params: any;
@@ -54,6 +55,30 @@ export async function generateMetadata(
 
 export default function Post({ params }: any) {
   const props = getPost(params);
+
+  // create jsonLd with article schema
+  const jsonLd: WithContext<Article> = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: props.frontMatter.title,
+    image: props.frontMatter.image,
+    datePublished: new Date(props.frontMatter.date).toISOString(),
+    dateModified: new Date(props.frontMatter.date).toISOString(),
+    author: {
+      "@type": "Person",
+      name: props.frontMatter.author,
+      url: props.frontMatter.source || "https://sawocangkring.my.id",
+    },
+    articleBody: props.content,
+    articleSection: props.frontMatter.category,
+    publisher: {
+      "@type": "Organization",
+      name: "Media Sawocangkring",
+      logo: "https://sawocangkring.my.id/icon.png",
+    },
+    wordCount: props.content.split(" ").length,
+  };
+
   return (
     <main className="overflow-hidden">
       <section
@@ -126,6 +151,10 @@ export default function Post({ params }: any) {
           </div>
         </section>
       )}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
     </main>
   );
 }
