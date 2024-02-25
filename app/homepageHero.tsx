@@ -7,7 +7,7 @@ import { buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import sosmedData from "@/data/sosmed.json";
-import { Instagram } from "lucide-react";
+import { Instagram, Youtube, Github, Facebook } from "lucide-react";
 
 export default function HomepageHero() {
   return (
@@ -85,22 +85,28 @@ export default function HomepageHero() {
             <ul className="flex w-full max-w-xl mt-4 justify-between gap-6">
               {sosmedData.map((sosmed, index) => (
                 <li key={index} className="flex items-center">
-                  <Link href={sosmed.url}>
-                    <div
-                      className="group bg-white bg-opacity-5 backdrop-filter backdrop-blur-sm rounded-lg group cursor-pointer border-l border-t border-transparent hover:bg-opacity-10 hover:border-white hover:border-opacity-10 transition-all ease-brand duration-250"
-                      title={sosmed.media}
-                    >
-                      <Instagram color="#ffffff" size={32} />
-                    </div>
+                  <Link
+                    href={sosmed.url}
+                    className="relative size-12 items-center justify-center flex rounded-full p-2 hover:bg-gray-700 transition-colors duration-300 ease-in-out"
+                  >
+                    {/* if sosmed are facebook, show facebook components and so on */}
+                    {sosmed.media === "instagram" && (
+                      <Instagram color="#fff" className="z-10" />
+                    )}
+                    {sosmed.media === "youtube" && (
+                      <Youtube color="#fff" className="z-10" />
+                    )}
+                    {sosmed.media === "github" && (
+                      <Github color="#ffffff" className="z-10" />
+                    )}
+                    {sosmed.media === "facebook" && (
+                      <Facebook color="#fff" className="z-10" />
+                    )}
+                    <div className="absolute bg-black top-0 left-0 w-full h-full rounded-full z-[1] opacity-50 " />
                   </Link>
                 </li>
               ))}
             </ul>
-            {/* <p className="text-gray-300 font-medium leading-relaxed text-center max-w-xl lg:max-w-2xl mb-4 md:mb-7 text-sm md:text-base mt-6">
-              Disclaimer: Media Sawocangkring tidak dikelola oleh pemerintah
-              desa Sawocangkring. Media Sawocangkring dikelola oleh pemuda desa
-              Sawocangkring.
-            </p> */}
           </div>
         </div>
       </section>
