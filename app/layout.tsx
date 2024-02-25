@@ -5,6 +5,7 @@ import Footer from "./footer";
 import type { Viewport } from "next";
 import Header from "./header";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { Organization, WithContext } from "schema-dts";
 
 export const viewport: Viewport = {
   themeColor: "#051B2E",
@@ -46,6 +47,44 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://sawocangkring.my.id"),
 };
 
+const jsonLd: WithContext<Organization> = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Media Sawocangkring",
+  alternateName: "Sawocangkring Media",
+  legalName: "Media Sawocangkring",
+  description:
+    "Media Informasi Seputar Desa Sawocangkring. Diramut arek-arek Sawocangkring.",
+  url: "https://sawocangkring.my.id",
+  logo: "https://sawocangkring.my.id/icon.png",
+  email: "halo@sawocangkring.my.id",
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+628155338525",
+    email: "halo@sawocangkring.my.id",
+    contactType: "Penglola IT",
+  },
+  sameAs: ["https://www.instagram.com/mediasawocangkring"],
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Desa Sawocangkring",
+    addressLocality: "Sawocangkring",
+    addressRegion: "Jawa Timur",
+    postalCode: "61261",
+    addressCountry: "ID",
+  },
+  numberOfEmployees: {
+    "@type": "QuantitativeValue",
+    value: "10",
+  },
+  foundingDate: "2021-08-01",
+  foundingLocation: {
+    "@type": "Place",
+    name: "Desa Sawocangkring",
+    address: "Desa Sawocangkring, Sawocangkring, Sidoarjo, Jawa Timur",
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -57,6 +96,10 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </body>
       <GoogleAnalytics gaId="G-DTRBLY6MY9" />
     </html>
