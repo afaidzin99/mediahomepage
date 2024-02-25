@@ -97,11 +97,11 @@ export default function Post({ params }: any) {
         >
           <div className="flex flex-col -mt-20 bg-no-repeat py-3">
             <Link
-              href={"/"}
+              href={"/berita"}
               className="text-blue-400 text-base flex flex-row gap-2 py-3 pb-6"
             >
               <ChevronLeft />
-              <p className="text-blue-400 font-semibold">Beranda</p>
+              <p className="text-blue-400 font-semibold">Daftar Berita</p>
             </Link>
             <h1 className="lg:pt-5 font-extrabold text-white font-intro uppercase leading-normal tracking-tight text-2xl md:text-4xl lg:text-[42px] mb-2 md:mb-3 lg:mb-2">
               {props.frontMatter.title}
@@ -114,7 +114,12 @@ export default function Post({ params }: any) {
               {props.frontMatter.editor}
             </p>
             <p className="text-white font-medium leading-relaxed max-w-xl lg:max-w-2xl mb-4 md:mb-7 text-sm md:text-base">
-              {props.frontMatter.date}
+              {new Date(props.frontMatter.date).toLocaleDateString("id-ID", {
+                weekday: "long",
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })}
             </p>
           </div>
         </section>
