@@ -44,7 +44,7 @@ export default function Page() {
               <p className="text-blue-400 font-semibold">Beranda</p>
             </Link>
             <h1 className="lg:pt-5 font-extrabold text-white font-intro uppercase leading-normal tracking-tight text-2xl md:text-4xl lg:text-[42px] mb-2 md:mb-3 lg:mb-2">
-              Sejarah Desa Sawocangkring
+              {data.title}
             </h1>
             <p className="text-white font-medium leading-relaxed max-w-xl lg:max-w-2xl mb-4 md:mb-7 text-sm md:text-base">
               Sejarah desa Sawocangkring. Ditelisik melalui landasan riset dan
