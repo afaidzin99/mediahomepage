@@ -8,7 +8,6 @@ import {
 } from "@/components/ui/card";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import latestNews from "@/data/berita.json";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import fs from "fs";
 import path from "path";
