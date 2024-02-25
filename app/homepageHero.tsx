@@ -8,15 +8,18 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import sosmedData from "@/data/sosmed.json";
 import { Instagram, Youtube, Github, Facebook } from "lucide-react";
+import Image from "next/image";
+import HeroImage from "@/public/hero.webp";
 
 export default function HomepageHero() {
   return (
     <div id="homepage-hero" className="relative">
       <div id="hero-image" className="h-[650px] relative">
-        <img
-          src="/hero.webp"
+        <Image
+          src={HeroImage}
           alt="Media Sawocangkring"
           className="w-full h-full object-cover filter grayscale"
+          priority
         />
         <div className="absolute inset-0 bg-gradient-to-r from-green-800 to-blue-800 mix-blend-multiply" />
       </div>
