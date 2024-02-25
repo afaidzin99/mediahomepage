@@ -5,11 +5,34 @@ import MdxRender from "../mdx-render";
 import { Metadata } from "next";
 import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
+import { YouTubeEmbed } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
   title: "Sejarah Desa Sawocangkring - Media Sawocangkring",
   description:
     "Sejarah desa Sawocangkring. Ditelisik melalui landasan riset dan wawancara dengan tokoh masyarakat.",
+  openGraph: {
+    title: "Sejarah Desa Sawocangkring - Media Sawocangkring",
+    description:
+      "Sejarah desa Sawocangkring. Ditelisik melalui landasan riset dan wawancara dengan tokoh masyarakat.",
+    images: [
+      {
+        url: "https://media.sawocangkring.com/opengraph-image.png",
+        width: 2400,
+        height: 1260,
+        alt: "Sejarah Desa Sawocangkring",
+      },
+    ],
+    url: "https://media.sawocangkring.com/sejarah",
+    type: "website",
+    videos: [
+      {
+        url: "https://www.youtube.com/watch?v=POTIPuiLRxA",
+        width: 1280,
+        height: 720,
+      },
+    ],
+  },
 };
 
 export default function Page() {
@@ -56,6 +79,12 @@ export default function Page() {
       <section id="content" className="bg-gray-200">
         <div className="container mx-auto px-6 2xl:px-0 xl:max-w-7xl relative -top-40 z-20">
           <div className="p-6 md:p-6 lg:py-8 lg:px-10 rounded-xl bg-white">
+            <div className="pb-4">
+              <YouTubeEmbed videoid="POTIPuiLRxA" />
+              <span className="text-sm text-gray-700 pt-1">
+                Video profil Desa Sawocangkring oleh KKN MBKM UNESA 2022
+              </span>
+            </div>
             <MdxRender source={content} frontMatter={data} />
           </div>
         </div>
