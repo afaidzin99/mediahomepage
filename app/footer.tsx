@@ -1,11 +1,16 @@
 import { MapPin, Mail } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
+import logoLong from "@/app/logo-long.svg";
 
 export default function Footer() {
   return (
     <footer className="bg-green-600 relative pt-8">
       <div className="container mx-auto px-6 2xl:px-0 xl:max-w-7xl">
         <div className="py-6 md:py-12 flex flex-col gap-6 md:gap-12 bg-no-repeat">
+          <Link href={"/"} className="w-fit">
+            <Image src={logoLong} alt="Media Sawocangkring" />
+          </Link>
           <div className="min-w-0 grid grid-cols-1 md:grid-cols-2 lg:flex lg:justify-between gap-6 text-white">
             {/* HQ Media Sawocangkring */}
             <div className="flex items-start gap-3">
@@ -20,7 +25,6 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-
             {/* Surel Media Sawocangkring */}
             <div className="flex items-start gap-3">
               <Mail size={24} />
