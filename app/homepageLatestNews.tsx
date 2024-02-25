@@ -10,6 +10,9 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import latestNews from "@/data/berita.json";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
 
 interface FeaturedArticleProps {
   id: string;
@@ -19,7 +22,35 @@ interface FeaturedArticleProps {
   instagramURL: string;
 }
 
+interface Blog {
+  meta: {
+    title: string;
+    date: string;
+    category: string;
+    author: string;
+    editor: string;
+    originalSource?: string;
+    instagramURL?: string;
+  };
+  slug: string;
+}
+
+interface LatestNewsProps {
+  blogs: Blog[];
+}
+
 export default function HomepageLatestNews() {
+  const blogDir = "data/berita";
+  const files = fs.readdirSync(path.join(blogDir));
+
+  const blogs = files.map((filename) => {
+    const fileContent = fs.readFileSync(path.join(blogDir, filename), "utf-8");
+    const { data: frontMatter } = matter(fileContent);
+    return {
+      meta: frontMatter,
+      slug: filename.replace(".mdx", ""),
+    };
+  });
   return (
     <section className="relative top-[-12rem] mb-[-12rem] md:top-[-14rem] md:mb-[-14rem] lg:-top-40 lg:-mb-40 z-10 pb-6 md:pb-8 xl:pb-12">
       <div className="container mx-auto px-6 2xl:px-0 xl:max-w-7xl">
@@ -31,20 +62,48 @@ export default function HomepageLatestNews() {
             <CardDescription className="flex justify-center items-center"></CardDescription>
           </CardHeader>
           <CardContent>
-            {latestNews
-              .filter((news) => news.featured)
-              .slice(0, 1)
-              .map((news) => (
-                <FeaturedArticle
-                  key={news.id}
-                  id={news.id}
-                  title={news.title}
-                  date={news.date}
-                  category={news.category}
-                  instagramURL={news.instagramURL}
-                />
-              ))}
-            <LatestNews />
+            <FeaturedArticle
+              id={blogs[0].slug}
+              title={blogs[0].meta.title}
+              date={blogs[0].meta.date}
+              category={blogs[0].meta.category}
+              instagramURL={blogs[0].meta.instagramURL}
+            />
+            <div className="w-full grid grid-cols-1 gap-4 mt-8">
+              <h3 className="text-2xl font-extrabold text-center">
+                Terbitan Terbaru
+              </h3>
+              <ul className="w-full h-full flex flex-col">
+                {blogs.slice(0, 5).map((news) => (
+                  <li
+                    key={news.slug}
+                    className="hover:bg-green-50 p-3 rounded-lg group transition-colors ease-brand duration-250"
+                  >
+                    <Link
+                      href={
+                        news.meta.instagramURL
+                          ? news.meta.instagramURL
+                          : `/berita/${news.slug}`
+                      }
+                      className="flex flex-col gap-1 w-full"
+                    >
+                      <h4 className="line-clamp-2 font-semibold text-base leading-7 text-blue-900 group-hover:text-green-900">
+                        {news.meta.title}
+                      </h4>
+                      <p className="flex justify-between text-sm items-center">
+                        {new Date(news.meta.date).toLocaleDateString("id-ID", {
+                          weekday: "long",
+                          year: "numeric",
+                          month: "long",
+                          day: "numeric",
+                        })}{" "}
+                        | {news.meta.category}
+                      </p>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </CardContent>
           <CardFooter>
             <Button asChild variant={"default"} className="w-full">
@@ -54,36 +113,6 @@ export default function HomepageLatestNews() {
         </Card>
       </div>
     </section>
-  );
-}
-
-function LatestNews() {
-  return (
-    <div className="w-full grid grid-cols-1 gap-4 mt-8">
-      <h3 className="text-2xl font-extrabold text-center">Terbitan Terbaru</h3>
-      <ul className="w-full h-full flex flex-col gap-4">
-        {latestNews.slice(0, 5).map((news) => (
-          <li
-            key={news.id}
-            className="hover:bg-green-50 p-3 rounded-lg group transition-colors ease-brand duration-250"
-          >
-            <Link
-              href={
-                news.instagramURL ? news.instagramURL : `/berita/${news.id}`
-              }
-              className="flex flex-col gap-3 w-full"
-            >
-              <p className="line-clamp-2 font-semibold text-lg leading-7 text-blue-900 group-hover:text-green-900">
-                {news.title}
-              </p>
-              <p className="flex justify-between text-sm items-center">
-                {news.date} | {news.category}
-              </p>
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
   );
 }
 
@@ -108,7 +137,16 @@ export const FeaturedArticle: React.FC<FeaturedArticleProps> = ({
         <Card className="border-0 visible inline-block absolute bottom-0 w-full bg-black bg-opacity-50 transition duration-500 ease-in-out group-hover:bg-opacity-70 backdrop-filter backdrop-blur-lg rounded-lg px-8 py-6 text-white">
           <div className="flex flex-col gap-2">
             <p className="text-lg font-semibold line-clamp-2">{title}</p>
-            <p className="text-xs">{category}</p>
+            <p className="text-xs">
+              {new Date(date).toLocaleDateString("id-ID", {
+                weekday: "long",
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })}
+              {" | "}
+              {category}
+            </p>
             <Button asChild variant={"default"} className="w-full">
               <Link href={instagramURL ? instagramURL : `/berita/${id}`}>
                 Baca berita
