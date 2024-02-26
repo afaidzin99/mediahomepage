@@ -4,16 +4,8 @@ import Link from "next/link";
 export default function Page() {
   return (
     <main className="overflow-hidden">
-      <section
-        id="homepage-hero"
-        className="relative w-full bg-gray-800 pt-16"
-        style={{
-          backgroundImage: 'url("/hero.webp")',
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <div className="overlay" />
+      <section id="homepage-hero" className="relative w-full bg-gray-800 pt-16">
+        <div className="absolute w-full h-full top-0 left-0 bg-gradient-to-t from-blue-700 to-blue-950 mix-blend-multiply" />
         <section
           id="hero-content"
           className="container mx-auto px-6 2xl:px-0 xl:max-w-7xl relative pt-24 pb-40 z-10"

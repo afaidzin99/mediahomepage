@@ -76,3 +76,9 @@
     rgba(0, 32, 39, 0.9) 100%
   );
 }
+
+.homepage-hero {
+  background-image: url("/hero.webp");
+  background-size: cover;
+  background-position: center;
+}
