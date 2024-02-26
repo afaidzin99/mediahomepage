@@ -1,35 +1,46 @@
 "use client";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
+import path from "path";
 
 export default function Header() {
-  const [navbarColor, setNavbarColor] = useState("bg-green-primary");
+  const [navbarColor, setNavbarColor] = useState("");
+  const [currentRoute, setCurrentRoute] = useState("");
+  const pathname = usePathname();
 
   useEffect(() => {
     const changeNavbarColor = () => {
-      if (window.scrollY >= 80) {
+      if (window.scrollY >= 80 && pathname.includes("/statistik")) {
+        setNavbarColor("bg-blue-500");
+      } else if (window.scrollY >= 80) {
         setNavbarColor("bg-greenBrand");
       } else {
-        setNavbarColor(
-          "bg-green-primary sm:h-16 lg:h-20 lg:bg-opacity-10 lg:backdrop-filter lg:hover:bg-green-primary"
-        );
+        setNavbarColor("lg:bg-opacity-10 lg:backdrop-filter");
       }
     };
+
+    if (pathname === "/statistik/kependudukan") {
+      setCurrentRoute(" | Statistik");
+    } else {
+      setCurrentRoute("");
+    }
 
     window.addEventListener("scroll", changeNavbarColor);
 
     return () => {
       window.removeEventListener("scroll", changeNavbarColor);
     };
-  }, []);
+  }, [pathname]);
+
   return (
     <header
-      className={`flex items-center w-screen h-12 fixed top-0 z-50 ease-in-out transition-all duration-200 ${navbarColor}`}
+      className={`sm:h-16 lg:h-20 lg:hover:bg-green-primary flex items-center w-screen h-14 fixed top-0 z-50 ease-in-out transition-all duration-200 ${navbarColor}`}
     >
       <div className="container mx-auto px-6 2xl:px-0 xl:max-w-7xl">
         <nav className="flex items-center">
-          <Link href={"/"} className="font-bold text-white">
-            Media Sawocangkring
+          <Link href={"/"} className="font-bold text-white py-2">
+            Media Sawocangkring {currentRoute}
           </Link>
         </nav>
       </div>
