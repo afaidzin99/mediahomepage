@@ -8,8 +8,12 @@ export default function Footer() {
     <footer className="bg-green-600 relative pt-8">
       <div className="container mx-auto px-6 2xl:px-0 xl:max-w-7xl">
         <div className="py-6 md:py-12 flex flex-col gap-6 md:gap-12 bg-no-repeat">
-          <Link href={"/"} className="w-fit">
-            <Image src={logoLong} alt="Media Sawocangkring" />
+          <Link href={"/"} className="w-fit h-16 md:h-fit">
+            <Image
+              src={logoLong}
+              alt="Media Sawocangkring"
+              className="h-full w-full object-contain"
+            />
           </Link>
           <div className="min-w-0 grid grid-cols-1 md:grid-cols-2 lg:flex lg:justify-between gap-6 text-white">
             {/* HQ Media Sawocangkring */}
