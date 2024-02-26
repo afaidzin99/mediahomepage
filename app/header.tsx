@@ -11,7 +11,7 @@ export default function Header() {
         setNavbarColor("bg-greenBrand");
       } else {
         setNavbarColor(
-          "bg-green-primary sm:h-16 lg:h-20 lg:bg-black lg:bg-opacity-10 lg:backdrop-filter lg:backdrop-blur-lg lg:hover:bg-green-primary"
+          "bg-green-primary sm:h-16 lg:h-20 lg:bg-opacity-10 lg:backdrop-filter lg:hover:bg-green-primary"
         );
       }
     };
