@@ -12,6 +12,7 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import Image from "next/image";
 
 interface FeaturedArticleProps {
   id: string;
@@ -19,6 +20,7 @@ interface FeaturedArticleProps {
   date: string;
   category: string;
   instagramURL: string;
+  className?: string;
 }
 
 interface Blog {
@@ -60,7 +62,7 @@ export default function HomepageLatestNews() {
             </CardTitle>
             <CardDescription className="flex justify-center items-center"></CardDescription>
           </CardHeader>
-          <CardContent>
+          <CardContent className="md:grid grid-cols-2 gap-8">
             <FeaturedArticle
               id={blogs[0].slug}
               title={blogs[0].meta.title}
@@ -68,11 +70,11 @@ export default function HomepageLatestNews() {
               category={blogs[0].meta.category}
               instagramURL={blogs[0].meta.instagramURL}
             />
-            <div className="w-full grid grid-cols-1 gap-4 mt-8">
+            <div className="w-full md:flex flex-col grid grid-cols-1 gap-4 mt-8">
               <h3 className="text-2xl font-extrabold text-center">
                 Terbitan Terbaru
               </h3>
-              <ul className="w-full h-full flex flex-col">
+              <ul className="w-full h-full flex flex-col md:grid grid-cols-2 grid-rows-4 gap-4">
                 {blogs.slice(0, 5).map((news) => (
                   <li
                     key={news.slug}
@@ -121,12 +123,14 @@ export const FeaturedArticle: React.FC<FeaturedArticleProps> = ({
   date,
   category,
   instagramURL,
+  className,
 }) => {
   return (
-    <Card className="relative overflow-hidden">
+    <Card className={`relative overflow-hidden ${className}`}>
       <div id="hero-image" className="relative">
         <AspectRatio ratio={1 / 1}>
-          <img
+          <Image
+            fill
             src="/hero.webp"
             alt="Media Sawocangkring"
             className="object-cover filter grayscale opacity-50 transition-all ease-brand duration-500 transform group-hover:scale-110 group-hover:filter-none group-hover:grayscale-0 group-hover:opacity-100 object-top"

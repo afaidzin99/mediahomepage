@@ -21,7 +21,7 @@ export default function HomepageHero() {
           className="w-full h-full object-cover filter grayscale"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-green-800 to-blue-800 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-gradient-to-tl from-green-800 to-blue-800 mix-blend-multiply" />
       </div>
       <section
         id="hero-content"
@@ -91,6 +91,7 @@ export default function HomepageHero() {
                   <Link
                     href={sosmed.url}
                     className="relative size-12 items-center justify-center flex rounded-full p-2 hover:bg-gray-700 transition-colors duration-300 ease-in-out"
+                    aria-label={sosmed.media}
                   >
                     {/* if sosmed are facebook, show facebook components and so on */}
                     {sosmed.media === "instagram" && (
