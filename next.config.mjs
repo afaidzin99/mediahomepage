@@ -16,7 +16,8 @@ const nextConfig = {
           contentSecurityPolicy: {
             "script-src":
               "'self' 'unsafe-eval' 'unsafe-inline' *.googletagmanager.com cdn.jsdelivr.net *.youtube.com",
-            "frame-src": "'self' *.googletagmanager.com *.youtube.com",
+            "frame-src":
+              "'self' *.googletagmanager.com *.youtube.com *.google.com",
             "style-src":
               "'self' 'unsafe-inline' fonts.googleapis.com cdn.jsdelivr.net",
             "connect-src":
