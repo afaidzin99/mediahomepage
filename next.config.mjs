@@ -15,15 +15,16 @@ const nextConfig = {
         headers: nextSafe({
           contentSecurityPolicy: {
             "script-src":
-              "'self' 'unsafe-eval' 'unsafe-inline' *.googletagmanager.com cdn.jsdelivr.net *.youtube.com",
+              "'self' 'unsafe-eval' 'unsafe-inline' *.googletagmanager.com cdn.jsdelivr.net *.youtube.com *.tableau.com",
             "frame-src":
-              "'self' *.googletagmanager.com *.youtube.com *.google.com",
+              "'self' *.googletagmanager.com *.youtube.com *.google.com *.tableau.com",
             "style-src":
               "'self' 'unsafe-inline' fonts.googleapis.com cdn.jsdelivr.net",
             "connect-src":
               "'self' *.googletagmanager.com *.google-analytics.com",
-            "img-src": "'self' data: *.ytimg.com",
+            "img-src": "'self' data: *.ytimg.com *.tableau.com",
           },
+          frameoptions: false,
         }),
       },
     ];

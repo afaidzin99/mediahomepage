@@ -2,16 +2,15 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import path from "path";
 
 export default function Header() {
-  const [navbarColor, setNavbarColor] = useState("");
+  const [navbarColor, setNavbarColor] = useState("bg-black");
   const [currentRoute, setCurrentRoute] = useState("");
   const pathname = usePathname();
 
   useEffect(() => {
     const changeNavbarColor = () => {
-      if (window.scrollY >= 80 && pathname.includes("/statistik")) {
+      if (pathname.includes("/statistik")) {
         setNavbarColor("bg-blue-500");
       } else if (window.scrollY >= 80) {
         setNavbarColor("bg-greenBrand");
