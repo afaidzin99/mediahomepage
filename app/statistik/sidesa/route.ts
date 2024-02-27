@@ -8,10 +8,6 @@ export async function GET(request: Request) {
     "https://sid.kemendesa.go.id/population-statistic/data?province_id=35&city_id=3515&district_id=3515090&village_id=3515090020&on=population"
   );
 
-  const getProfessionDesa = await fetch(
-    "https://sid.kemendesa.go.id/population-statistic/data?province_id=35&city_id=3515&district_id=3515090&village_id=3515090020&on=profession"
-  );
-
   if (!getPopulasiDesa.ok) {
     throw new Error(
       `HTTP error on SIDESA POPULASI! status: ${getPopulasiDesa.status}`
