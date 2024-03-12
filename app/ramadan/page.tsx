@@ -12,7 +12,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-
+import ClockWidget from "./clock";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
@@ -82,17 +82,12 @@ export default function Page() {
           <div className="p-6 md:p-6 lg:py-8 lg:px-10 rounded-xl bg-white">
             <div className="pb-4 flex flex-col gap-2">
               {/* return current hour and minutes */}
-              <div className="w-full flex flex-col justify-center items-center border-solid border-[1px] border-[#DDD] py-2 rounded-5 bg-[#F3F4F6]">
+              <div className="w-full flex flex-col justify-center items-center border-solid border-[1px] border-[#DDD] py-2 rounded-md bg-[#F3F4F6]">
                 <p>Sekarang pukul (WIB)</p>
-                <time className="text-[#333] text-[5rem] font-bold">
-                  {new Date().toLocaleTimeString("id-ID", {
-                    hour: "numeric",
-                    minute: "numeric",
-                  })}
-                </time>
+                <ClockWidget />
               </div>
               <WidgetJadwalPuasa />
-              <div className="w-full flex flex-col justify-center items-center border-solid mt-4 py-2 rounded-5">
+              <div className="w-full flex flex-col justify-center items-center mt-4 py-2 rounded-md border-solid border-[1px] border-[#DDD]">
                 <h2 className="font-bold text-[#333] text-xl text-center">
                   Jadwal Imsakiyah 1445 H
                 </h2>

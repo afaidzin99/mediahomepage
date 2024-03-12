@@ -82,3 +82,19 @@
   background-size: cover;
   background-position: center;
 }
+
+@keyframes pulse {
+  0% {
+    background-color: #3490dc;
+  }
+  50% {
+    background-color: #6cb2eb;
+  }
+  100% {
+    background-color: #3490dc;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s infinite;
+}

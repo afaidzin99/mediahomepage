@@ -25,7 +25,7 @@ export default function WidgetJadwalPuasa() {
   }
 
   return (
-    <div className="w-full bg-[url('/bg-imsakiyah-2024.png')] bg-[#FFF] bg-center bg-no-repeat bg-cover border-solid border-[1px] border-[#DDD] relative">
+    <div className="w-full bg-[url('/bg-imsakiyah-2024.png')] bg-[#FFF] bg-center bg-no-repeat bg-cover border-solid border-[1px] border-[#DDD] relative rounded-md">
       <div className="relative w-full max-w-[1280px] mx-auto md:py-4 md:px-10 px-2.5 py-2 rounded">
         <div className="flex flex-col justify-center items-center gap-2.5">
           <div className="flex flex-row md:gap-[46px] w-full md:justify-start justify-between">
@@ -33,8 +33,7 @@ export default function WidgetJadwalPuasa() {
               <div className="flex flex-col w-full">
                 <div className="flex flex-col md:flex-row md:gap-[18px] md:mb-[10px] md:items-center">
                   <h2 className="font-bold text-[#333] text-xl text-center">
-                    {" "}
-                    Jadwal Imsakiyah 1445 H{" "}
+                    Imsakiyah Hari Ini
                   </h2>
                   <p className="text-[#666] text-sm text-center">
                     {/* jadwal puasa date in indonesia long versioan */}
