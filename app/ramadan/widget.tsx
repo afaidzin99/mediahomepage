@@ -51,7 +51,7 @@ export default function WidgetJadwalPuasa() {
                 <div className="w-full flex flex-col justify-between md:gap-14 gap-2.5 font-sans">
                   <div
                     id="imsak"
-                    className="grid grid-cols-2 grid-rows-4 pt-4 pb-4 gap-4 md:flex flex-row md:gap-14 w-full md:justify-between justify-start items-start md:px-10 px-2.5 md:py-10 py-2.5 md:mb-4 mb-2.5"
+                    className="grid grid-cols-2 grid-rows-4 pt-4 pb-4 gap-4 md:flex flex-row w-full md:justify-between justify-start items-start md:px-10 px-2.5 md:py-4 py-2.5 md:mb-4 mb-2.5 md:gap-2"
                   >
                     <div className="flex flex-col items-center border-r-0 border-solid border-[#D9D9D9]">
                       <p className="text-[#666] text-2xl">Imsak</p>
