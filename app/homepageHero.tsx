@@ -79,9 +79,7 @@ export default function HomepageHero() {
             <div className="w-full max-w-xl">
               <div className="flex flex-col mt-6 content-center">
                 <Button asChild variant={"default"} className="py-6">
-                  <Link href={"https://instagram.com/mediasawocangkring"}>
-                    Informasi Ramadhan 2024 - 1445 H
-                  </Link>
+                  <Link href="/ramadan">Informasi Ramadhan 2024 - 1445 H</Link>
                 </Button>
                 {/* <Button asChild variant={"default"} className="py-6">
                   <Link href={"https://instagram.com/mediasawocangkring"}>
