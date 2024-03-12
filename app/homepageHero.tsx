@@ -80,9 +80,14 @@ export default function HomepageHero() {
               <div className="flex flex-col mt-6 content-center">
                 <Button asChild variant={"default"} className="py-6">
                   <Link href={"https://instagram.com/mediasawocangkring"}>
-                    Kirim Berita atau Artikel
+                    Informasi Ramadhan 2024 - 1445 H
                   </Link>
                 </Button>
+                {/* <Button asChild variant={"default"} className="py-6">
+                  <Link href={"https://instagram.com/mediasawocangkring"}>
+                    Kirim Berita atau Artikel
+                  </Link>
+                </Button> */}
               </div>
             </div>
             <ul className="flex w-full max-w-xl mt-4 justify-between gap-6">
