@@ -22,7 +22,8 @@ const nextConfig = {
               "'self' 'unsafe-inline' fonts.googleapis.com cdn.jsdelivr.net",
             "connect-src":
               "'self' *.googletagmanager.com *.google-analytics.com",
-            "img-src": "'self' data: *.ytimg.com *.tableau.com",
+            "img-src":
+              "'self' data: *.ytimg.com *.tableau.com is3.cloudhost.id",
           },
           frameoptions: false,
         }),
