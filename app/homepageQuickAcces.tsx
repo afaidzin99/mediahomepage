@@ -47,6 +47,11 @@ const services = [
     image: "/Seal_of_Sidoarjo_Regency.svg",
   },
   {
+    title: "Profil Desa @ Kemendes",
+    description: "Profil desa Sawocangkring pada website Kemendes.",
+    url: "https://sid.kemendesa.go.id",
+  },
+  {
     title: "Peta Desa",
     description:
       "Peta desa Sawocangkring berbasis data geospasial tim Media Sawocangkring.",
@@ -60,8 +65,9 @@ const services = [
     image: "/medialogo.png",
   },
   {
-    title: "Profil Desa @ Kemendes",
-    description: "Profil desa Sawocangkring pada website Kemendes.",
-    url: "https://sid.kemendesa.go.id",
+    title: "Kepemudaan Desa",
+    description: "Daftar organisasi kepemudaan Desa Sawocangkring.",
+    url: "/kepemudaan",
+    image: "/medialogo.png",
   },
 ];
