@@ -14,7 +14,7 @@ import HeroImage from "@/public/hero.webp";
 export default function HomepageHero() {
   return (
     <div id="homepage-hero" className="relative">
-      <div id="hero-image" className="h-[650px] relative">
+      <div id="hero-image" className="h-[720px] relative">
         <Image
           src={HeroImage}
           alt="Media Sawocangkring"
@@ -29,11 +29,11 @@ export default function HomepageHero() {
       >
         <div className="container mx-auto px-6">
           <div className="flex flex-col items-center -mt-20 bg-no-repeat py-3">
-            <h1 className="lg:pt-5 font-extrabold text-white font-intro uppercase leading-normal text-center tracking-tight text-2xl md:text-4xl lg:text-[42px] mb-2 md:mb-3 lg:mb-2">
-              Media Sawocangkring
+            <h1 className="lg:pt-5 font-extrabold text-white font-intro uppercase text-center leading-10 text-2xl md:text-4xl lg:text-[42px] mb-2 md:mb-3 lg:mb-2 max-w-screen-sm">
+              Media Informasi Seputar Desa Sawocangkring
             </h1>
             <p className="text-gray-300 font-medium leading-relaxed text-center max-w-xl lg:max-w-2xl mb-4 md:mb-7 text-sm md:text-base">
-              Media informasi seputar Desa Sawocangkring.
+              Temukan referensi dan informasi terkini seputar Desa Sawocangkring
             </p>
             <div className="max-w-xl lg:max-w-2xl w-full">
               <section>
