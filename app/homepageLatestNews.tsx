@@ -21,6 +21,7 @@ interface FeaturedArticleProps {
   category: string;
   instagramURL: string;
   className?: string;
+  photo?: string;
 }
 
 interface Blog {
@@ -32,6 +33,7 @@ interface Blog {
     editor: string;
     originalSource?: string;
     instagramURL?: string;
+    photo?: string;
   };
   slug: string;
 }
@@ -69,12 +71,13 @@ export default function HomepageLatestNews() {
               date={blogs[0].meta.date}
               category={blogs[0].meta.category}
               instagramURL={blogs[0].meta.instagramURL}
+              photo={blogs[0].meta.photo}
             />
             <div className="w-full md:flex flex-col grid grid-cols-1 gap-4 mt-8">
               <h3 className="text-2xl font-extrabold text-center">
                 Terbitan Terbaru
               </h3>
-              <ul className="w-full h-full flex flex-col md:grid grid-cols-2 grid-rows-4 gap-4">
+              <ul className="w-full flex flex-col md:grid grid-cols-2 grid-rows-3 gap-4">
                 {blogs.slice(0, 5).map((news) => (
                   <li
                     key={news.slug}
@@ -107,7 +110,7 @@ export default function HomepageLatestNews() {
             </div>
           </CardContent>
           <CardFooter>
-            <Button asChild variant={"default"} className="w-full">
+            <Button asChild variant={"default"} className="w-full py-6 text-xl">
               <Link href={"/berita"}>Baca berita lainnya </Link>
             </Button>
           </CardFooter>
@@ -124,6 +127,7 @@ export const FeaturedArticle: React.FC<FeaturedArticleProps> = ({
   category,
   instagramURL,
   className,
+  photo,
 }) => {
   return (
     <Card className={`relative overflow-hidden ${className}`}>
@@ -131,32 +135,29 @@ export const FeaturedArticle: React.FC<FeaturedArticleProps> = ({
         <AspectRatio ratio={1 / 1}>
           <Image
             fill
-            src="/hero.webp"
+            src={photo ? photo : "/images/hero.jpg"}
             alt="Media Sawocangkring"
-            className="object-cover filter grayscale opacity-50 transition-all ease-brand duration-500 transform group-hover:scale-110 group-hover:filter-none group-hover:grayscale-0 group-hover:opacity-100 object-top"
+            className="object-cover filter transition-all ease-brand duration-500 transform group-hover:scale-110 group-hover:filter-none group-hover:grayscale-0 group-hover:opacity-100 object-top"
           />
         </AspectRatio>
-        <div className="absolute inset-0 bg-gradient-to-r from-green-800 to-blue-800 mix-blend-multiply" />
-        <Card className="border-0 visible inline-block absolute bottom-0 w-full bg-black bg-opacity-50 transition duration-500 ease-in-out group-hover:bg-opacity-70 backdrop-filter backdrop-blur-lg rounded-lg px-8 py-6 text-white">
-          <div className="flex flex-col gap-2">
-            <p className="text-lg font-semibold line-clamp-2">{title}</p>
-            <p className="text-xs">
-              {new Date(date).toLocaleDateString("id-ID", {
-                weekday: "long",
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              })}
-              {" | "}
-              {category}
-            </p>
-            <Button asChild variant={"default"} className="w-full">
-              <Link href={instagramURL ? instagramURL : `/berita/${id}`}>
-                Baca berita
-              </Link>
-            </Button>
-          </div>
-        </Card>
+        {/* <div className="absolute inset-0 bg-gradient-to-r from-green-800 to-blue-800 mix-blend-multiply" /> */}
+        <Link href={instagramURL ? instagramURL : `/berita/${id}`}>
+          <Card className="border-0 visible inline-block absolute bottom-0 w-full bg-black bg-opacity-50 transition duration-500 ease-in-out group-hover:bg-opacity-70 backdrop-filter backdrop-blur-lg rounded-lg px-8 py-6 text-white">
+            <div className="flex flex-col gap-2">
+              <p className="text-lg font-semibold line-clamp-2">{title}</p>
+              <p className="text-xs">
+                {new Date(date).toLocaleDateString("id-ID", {
+                  weekday: "long",
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })}
+                {" | "}
+                {category}
+              </p>
+            </div>
+          </Card>
+        </Link>
       </div>
     </Card>
   );

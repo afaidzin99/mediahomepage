@@ -5,6 +5,15 @@ const isDev = process.env.NODE_ENV !== "production";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "is3.cloudhost.id",
+        port: "",
+      },
+    ],
+  },
   // Configure `pageExtensions`` to include MDX files
   pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
   // Optionally, add any other Next.js config below
@@ -24,6 +33,7 @@ const nextConfig = {
               "'self' *.googletagmanager.com *.google-analytics.com sid.kemendesa.go.id",
             "img-src":
               "'self' data: *.ytimg.com *.tableau.com is3.cloudhost.id *.tile.openstreetmap.org",
+            "frame-ancestors": "'self' *.kemendesa.go.id",
           },
           frameoptions: false,
         }),
