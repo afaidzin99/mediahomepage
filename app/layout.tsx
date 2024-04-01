@@ -18,9 +18,6 @@ const PJS = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Media Sawocangkring",
-  description:
-    "Media Informasi Seputar Desa Sawocangkring. Diramut arek-arek Sawocangkring.",
   creator: "Media Sawocangkring",
   publisher: "Media Sawocangkring",
   keywords:
