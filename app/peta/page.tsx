@@ -24,6 +24,12 @@ export default function PetaDesa() {
           <div className="h-[320px] lg:h-[720px]">
             <Map />
           </div>
+          <p className="pt-8 text-sm">
+            Data diperoleh melalui API Openstreetmap dengan penyesuaian pada
+            objek - objek vital milik Desa Sawocangkring. Dikurasi secara
+            independen berbasis data geospasial. Mohon laporkan kepada kami jika
+            terdapat ketidaksesuaian data.
+          </p>
         </div>
       </PageContent>
     </main>
