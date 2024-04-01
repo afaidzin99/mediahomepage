@@ -21,7 +21,7 @@ const nextConfig = {
             "style-src":
               "'self' 'unsafe-inline' fonts.googleapis.com cdn.jsdelivr.net",
             "connect-src":
-              "'self' *.googletagmanager.com *.google-analytics.com",
+              "'self' *.googletagmanager.com *.google-analytics.com sid.kemendesa.go.id",
             "img-src":
               "'self' data: *.ytimg.com *.tableau.com is3.cloudhost.id *.tile.openstreetmap.org",
           },

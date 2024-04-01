@@ -1,8 +1,26 @@
+"use client";
 import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
-import TableauComponent from "./tableauComponents";
+import DataPopulasi from "@/data/populasi.json";
+import PyramidPopulation from "./pyramidage";
+import { PopulationAgeTable, PopulationMarriedTable } from "./populationtable";
 
 export default function Page() {
+  const dataPoints = [
+    { title: "Jumlah Penduduk", value: DataPopulasi.total },
+    { title: "Jumlah Laki-laki", value: DataPopulasi.men.total },
+    { title: "Jumlah Perempuan", value: DataPopulasi.women.total },
+  ];
+
+  const DataCard = ({ title, value }: { title: string; value: number }) => (
+    <div className="flex flex-col justify-center items-center bg-blue-100 p-4 rounded-lg">
+      <h3 className="text-center text-lg md:text-xl lg:text-2xl">{title}</h3>
+      <p className="text-center font-bold text-5xl md:text-3xl lg:text-4xl pt-2">
+        {value}
+      </p>
+    </div>
+  );
+
   return (
     <main className="overflow-hidden">
       <section id="homepage-hero" className="relative w-full pt-16">
@@ -26,22 +44,56 @@ export default function Page() {
               Sistem Informasi Desa (SID) Kementerian Desa Negeri Republik
               Indonesia.
             </p>
+            <Link
+              className="hover:text-blue-600 text-sm font-semibold"
+              href={
+                "https://sid.kemendesa.go.id/population-statistic/data?province_id=35&city_id=3515&district_id=3515090&village_id=3515090020&on=population"
+              }
+            >
+              <code>
+                Terakhir diperbarui pada:{" "}
+                {new Date(DataPopulasi.last_update).toLocaleDateString(
+                  "id-ID",
+                  {
+                    weekday: "long",
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  }
+                )}
+              </code>
+            </Link>
           </div>
         </section>
       </section>
       <section id="content" className="">
         <div className="container mx-auto pb-16 px-6 2xl:px-0 xl:max-w-7xl relative">
-          {/* <iframe
-            src="https://lookerstudio.google.com/embed/reporting/7422b3cd-d674-488a-b04a-8e8318d0141e/page/P1LrD"
-            className="w-full h-screen rounded-md"
-            title="Statistik Kependudukan"
-          /> */}
-          <TableauComponent />
-          {/* <iframe
-            src="https://public.tableau.com/views/MediaSawocangkring/Dashboard1?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link"
-            className="w-full h-full rounded-md"
-            title="Statistik Kependudukan"
-          /> */}
+          <div className="p-6 md:p-6 lg:py-8 lg:px-10 rounded-xl bg-white">
+            <div className="pb-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {dataPoints.map((dataPoint, index) => (
+                  <DataCard
+                    key={index}
+                    title={dataPoint.title}
+                    value={dataPoint.value}
+                  />
+                ))}
+              </div>
+              <h2 className="text-center font-bold text-2xl md:text-3xl lg:text-4xl py-8">
+                Piramida Penduduk Berdasarkan Umur & Jenis Kelamin
+              </h2>
+              <div className="h-screen lg:h-fit">
+                <PyramidPopulation />
+              </div>
+              <h2 className="text-center font-bold text-2xl md:text-3xl lg:text-4xl py-8">
+                Tabel Jumlah Penduduk
+              </h2>
+              <div className="overflow-x-auto grid grid-cols-2 gap-4">
+                <PopulationAgeTable />
+                <PopulationMarriedTable />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
