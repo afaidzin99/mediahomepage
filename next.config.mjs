@@ -17,13 +17,13 @@ const nextConfig = {
             "script-src":
               "'self' 'unsafe-eval' 'unsafe-inline' *.googletagmanager.com cdn.jsdelivr.net *.youtube.com *.tableau.com",
             "frame-src":
-              "'self' *.googletagmanager.com *.youtube.com *.google.com *.tableau.com",
+              "'self' *.googletagmanager.com *.youtube.com *.google.com *.tableau.com *.openstreetmap.org",
             "style-src":
               "'self' 'unsafe-inline' fonts.googleapis.com cdn.jsdelivr.net",
             "connect-src":
               "'self' *.googletagmanager.com *.google-analytics.com",
             "img-src":
-              "'self' data: *.ytimg.com *.tableau.com is3.cloudhost.id",
+              "'self' data: *.ytimg.com *.tableau.com is3.cloudhost.id *.tile.openstreetmap.org",
           },
           frameoptions: false,
         }),
