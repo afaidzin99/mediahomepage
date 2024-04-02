@@ -1,21 +1,29 @@
-import { MapPin, Mail } from "lucide-react";
+import { MapPin, Mail, GitFork, Share2 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import logoLong from "@/app/logo-long.svg";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import sosmedData from "@/data/sosmed.json";
+import { Instagram, Youtube, Github, Facebook } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-green-600 relative pt-8">
+    <footer className="bg-[#16a75c] relative pt-8">
       <div className="container mx-auto px-6 2xl:px-0 xl:max-w-7xl">
         <div className="py-6 md:py-12 flex flex-col gap-6 md:gap-12 bg-no-repeat">
-          <Link href={"/"} className="w-fit h-16 md:h-fit">
+          <Link href={"/"} className="w-fit lg:w-1/4 h-16 md:h-fit">
             <Image
               src={logoLong}
               alt="Media Sawocangkring"
               className="h-full w-full object-contain"
             />
           </Link>
-          <div className="min-w-0 grid grid-cols-1 md:grid-cols-2 lg:flex lg:justify-between gap-6 text-white">
+          <div className="min-w-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-white">
             {/* HQ Media Sawocangkring */}
             <div className="flex items-start gap-3">
               <MapPin size={24} />
@@ -39,10 +47,107 @@ export default function Footer() {
                 </div>
               </div>
             </div>
+
+            {/* Sosial media */}
+            <div className="flex items-start gap-3">
+              <Share2 size={24} />
+              <div className="flex flex-col gap-1">
+                <p className="font-roboto font-bold leading-7">Sosial Media</p>
+                <ul className="flex w-full max-w-xl justify-between gap-6">
+                  {sosmedData.map((sosmed, index) => (
+                    <li key={index} className="flex items-center">
+                      <Link
+                        href={sosmed.url}
+                        className="relative size-11 items-center justify-center flex rounded-md p-2 border-[1px] border-white border-opacity-20 hover:bg-green-800 transition-colors duration-300 ease-in-out"
+                        aria-label={sosmed.media}
+                      >
+                        {/* if sosmed are facebook, show facebook components and so on */}
+                        {sosmed.media === "instagram" && (
+                          <Instagram color="#fff" className="z-10" />
+                        )}
+                        {sosmed.media === "youtube" && (
+                          <Youtube color="#fff" className="z-10" />
+                        )}
+                        {sosmed.media === "github" && (
+                          <Github color="#ffffff" className="z-10" />
+                        )}
+                        {sosmed.media === "facebook" && (
+                          <Facebook color="#fff" className="z-10" />
+                        )}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* Sitemap group */}
+          </div>
+          <div id="sitemap-group" className="text-white">
+            <div className="flex items-start gap-3">
+              <GitFork size={24} />
+              <div className="flex flex-col gap-1 w-full">
+                <p className="font-roboto font-bold leading-7">Sitemap</p>
+                <Accordion
+                  type="multiple"
+                  className="flex flex-col lg:grid grid-cols-4 lg:gap-12"
+                >
+                  <AccordionItem value="item-1">
+                    <AccordionTrigger className="font-semibold">
+                      Profil Sawocangkring
+                    </AccordionTrigger>
+                    <AccordionContent className="flex flex-col gap-4">
+                      <Link href={"/sejarah"}>Sejarah Desa</Link>
+                      <Link href={"/kepemudaan"}>Kepemudaan</Link>
+                      <Link href={"/peta"}>Peta Desa</Link>
+                    </AccordionContent>
+                  </AccordionItem>
+
+                  <AccordionItem value="item-2">
+                    <AccordionTrigger className="font-semibold">
+                      Statistik Sawocangkring
+                    </AccordionTrigger>
+                    <AccordionContent className="flex flex-col gap-4">
+                      <Link href={"/statistik"}>Dashboard Statistik</Link>
+                      <Link href={"/kepemudaan"}>Statistik Kependudukan</Link>
+                      <Link
+                        href={
+                          "https://rekap-pemilu2024-swc.internal.reng.my.id/"
+                        }
+                      >
+                        Rekapitulasi KPPS PEMILU 2024
+                      </Link>
+                    </AccordionContent>
+                  </AccordionItem>
+
+                  <AccordionItem value="item-3">
+                    <AccordionTrigger className="font-semibold">
+                      Ekosistem Sawocangkring
+                    </AccordionTrigger>
+                    <AccordionContent className="flex flex-col gap-4">
+                      <Link href={"https://sawocangkring-wonoayu.desa.id"}>
+                        Website Desa
+                      </Link>
+                      <Link href={"https://kemendesa.go.id"}>
+                        Kementerian Desa
+                      </Link>
+                      <Link
+                        href={"https://tanahair.indonesia.go.id/portal-web"}
+                      >
+                        Geo Spasial Desa
+                      </Link>
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div className="w-full py-4 lg:py-6 border-t border-green-500">
+      <div
+        id="IT-Disclaimer"
+        className="w-full py-4 lg:py-6 border-t border-green-500"
+      >
         <div className="container mx-auto px-6 2xl:px-0 xl:max-w-7xl">
           <div className="flex flex-col items-center lg:items-start gap-5">
             <p className="text-sm font-normal leading-6 text-white lg:text-left">
