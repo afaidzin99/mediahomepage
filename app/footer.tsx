@@ -168,6 +168,17 @@ function SitemapGroup() {
             </Link>
           </AccordionContent>
         </AccordionItem>
+
+        <AccordionItem value="item-3">
+          <AccordionTrigger className="font-semibold">
+            Kebijakan Informasi & Teknologi
+          </AccordionTrigger>
+          <AccordionContent className="flex flex-col gap-4">
+            <Link href={"/kebijakan/privasi"}>Kebijakan Privasi</Link>
+            <Link href={"/kebijakan/penggunaan"}>Kebijakan Penggunaan</Link>
+            <Link href={"/kebijakan/teknologi"}>Kebijakan Teknologi</Link>
+          </AccordionContent>
+        </AccordionItem>
       </Accordion>
 
       <div className="hidden lg:grid grid-cols-4 lg:gap-12">
@@ -201,6 +212,15 @@ function SitemapGroup() {
             <Link href={"https://tanahair.indonesia.go.id/portal-web"}>
               Geo Spasial Desa
             </Link>
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-3 py-4">
+          <p className="font-semibold">Kebijakan Informasi & Teknologi</p>
+          <div className="flex flex-col gap-2">
+            <Link href={"/kebijakan/privasi"}>Kebijakan Privasi</Link>
+            <Link href={"/kebijakan/penggunaan"}>Kebijakan Penggunaan</Link>
+            <Link href={"/kebijakan/teknologi"}>Kebijakan Teknologi</Link>
           </div>
         </div>
       </div>

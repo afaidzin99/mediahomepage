@@ -27,7 +27,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   // Static pages
-  const routes = ["", "/sejarah"].map((route) => ({
+  const routes = [
+    "",
+    "/sejarah",
+    "/kebijakan/privasi",
+    "/kebijakan/teknologi",
+    "/kebijakan/penggunaan",
+    "/statistik",
+    "/statistik/kependudukan",
+    "/kepemudaan",
+  ].map((route) => ({
     url: `${URL}${route}`,
     lastModified: new Date().toISOString(),
   }));
