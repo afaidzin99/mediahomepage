@@ -88,57 +88,7 @@ export default function Footer() {
               <GitFork size={24} />
               <div className="flex flex-col gap-1 w-full">
                 <p className="font-roboto font-bold leading-7">Sitemap</p>
-                <Accordion
-                  type="multiple"
-                  className="flex flex-col lg:grid grid-cols-4 lg:gap-12"
-                >
-                  <AccordionItem value="item-1">
-                    <AccordionTrigger className="font-semibold">
-                      Profil Sawocangkring
-                    </AccordionTrigger>
-                    <AccordionContent className="flex flex-col gap-4">
-                      <Link href={"/sejarah"}>Sejarah Desa</Link>
-                      <Link href={"/kepemudaan"}>Kepemudaan</Link>
-                      <Link href={"/peta"}>Peta Desa</Link>
-                    </AccordionContent>
-                  </AccordionItem>
-
-                  <AccordionItem value="item-2">
-                    <AccordionTrigger className="font-semibold">
-                      Statistik Sawocangkring
-                    </AccordionTrigger>
-                    <AccordionContent className="flex flex-col gap-4">
-                      <Link href={"/statistik"}>Dashboard Statistik</Link>
-                      <Link href={"/kepemudaan"}>Statistik Kependudukan</Link>
-                      <Link
-                        href={
-                          "https://rekap-pemilu2024-swc.internal.reng.my.id/"
-                        }
-                      >
-                        Rekapitulasi KPPS PEMILU 2024
-                      </Link>
-                    </AccordionContent>
-                  </AccordionItem>
-
-                  <AccordionItem value="item-3">
-                    <AccordionTrigger className="font-semibold">
-                      Ekosistem Sawocangkring
-                    </AccordionTrigger>
-                    <AccordionContent className="flex flex-col gap-4">
-                      <Link href={"https://sawocangkring-wonoayu.desa.id"}>
-                        Website Desa
-                      </Link>
-                      <Link href={"https://kemendesa.go.id"}>
-                        Kementerian Desa
-                      </Link>
-                      <Link
-                        href={"https://tanahair.indonesia.go.id/portal-web"}
-                      >
-                        Geo Spasial Desa
-                      </Link>
-                    </AccordionContent>
-                  </AccordionItem>
-                </Accordion>
+                <SitemapGroup />
               </div>
             </div>
           </div>
@@ -173,5 +123,87 @@ export default function Footer() {
         </div>
       </div>
     </footer>
+  );
+}
+
+function SitemapGroup() {
+  return (
+    <>
+      <Accordion type="multiple" className="flex flex-col lg:hidden">
+        <AccordionItem value="item-1">
+          <AccordionTrigger className="font-semibold">
+            Profil Sawocangkring
+          </AccordionTrigger>
+          <AccordionContent className="flex flex-col gap-4">
+            <Link href={"/sejarah"}>Sejarah Desa</Link>
+            <Link href={"/kepemudaan"}>Kepemudaan</Link>
+            <Link href={"/peta"}>Peta Desa</Link>
+          </AccordionContent>
+        </AccordionItem>
+
+        <AccordionItem value="item-2">
+          <AccordionTrigger className="font-semibold">
+            Statistik Sawocangkring
+          </AccordionTrigger>
+          <AccordionContent className="flex flex-col gap-4">
+            <Link href={"/statistik"}>Dashboard Statistik</Link>
+            <Link href={"/kepemudaan"}>Statistik Kependudukan</Link>
+            <Link href={"https://rekap-pemilu2024-swc.internal.reng.my.id/"}>
+              Rekapitulasi KPPS PEMILU 2024
+            </Link>
+          </AccordionContent>
+        </AccordionItem>
+
+        <AccordionItem value="item-3">
+          <AccordionTrigger className="font-semibold">
+            Ekosistem Sawocangkring
+          </AccordionTrigger>
+          <AccordionContent className="flex flex-col gap-4">
+            <Link href={"https://sawocangkring-wonoayu.desa.id"}>
+              Website Desa
+            </Link>
+            <Link href={"https://kemendesa.go.id"}>Kementerian Desa</Link>
+            <Link href={"https://tanahair.indonesia.go.id/portal-web"}>
+              Geo Spasial Desa
+            </Link>
+          </AccordionContent>
+        </AccordionItem>
+      </Accordion>
+
+      <div className="hidden lg:grid grid-cols-4 lg:gap-12">
+        <div className="flex flex-col gap-3 py-4">
+          <p className="font-semibold">Profil Sawocangkring</p>
+          <div className="flex flex-col gap-2">
+            <Link href={"/sejarah"}>Sejarah Desa</Link>
+            <Link href={"/kepemudaan"}>Kepemudaan</Link>
+            <Link href={"/peta"}>Peta Desa</Link>
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-3 py-4">
+          <p className="font-semibold">Statistik Sawocangkring</p>
+          <div className="flex flex-col gap-2">
+            <Link href={"/statistik"}>Dashboard Statistik</Link>
+            <Link href={"/kepemudaan"}>Statistik Kependudukan</Link>
+            <Link href={"https://rekap-pemilu2024-swc.internal.reng.my.id/"}>
+              Rekapitulasi KPPS PEMILU 2024
+            </Link>
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-3 py-4">
+          <p className="font-semibold">Ekosistem Sawocangkring</p>
+          <div className="flex flex-col gap-2">
+            <Link href={"https://sawocangkring-wonoayu.desa.id"}>
+              Website Desa
+            </Link>
+            <Link href={"https://kemendesa.go.id"}>Kementerian Desa</Link>
+            <Link href={"https://tanahair.indonesia.go.id/portal-web"}>
+              Geo Spasial Desa
+            </Link>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
