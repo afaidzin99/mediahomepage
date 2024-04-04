@@ -55,7 +55,7 @@ export default function HomepageLatestNews() {
     };
   });
   return (
-    <section className="relative top-[-12rem] mb-[-12rem] md:top-[-14rem] md:mb-[-14rem] lg:-top-40 lg:-mb-40 z-10 pb-6 md:pb-8 xl:pb-12">
+    <section className="relative  top-[-12rem] mb-[-12rem] md:top-[-14rem] md:mb-[-14rem] lg:-top-40 lg:-mb-40 z-10 pb-6 md:pb-8 xl:pb-12">
       <div className="container mx-auto px-6 2xl:px-0 xl:max-w-7xl">
         <Card>
           <CardHeader>

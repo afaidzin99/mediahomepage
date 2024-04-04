@@ -1,6 +1,7 @@
 import HomepageHero from "./homepageHero";
 import HomepageLatestNews from "./homepageLatestNews";
 import HomepageQuickAcces from "./homepageQuickAcces";
+import HomepageSidoarjoNetwork from "./homepageSidoarjoNetwork";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -15,6 +16,7 @@ export default function Home() {
       <HomepageHero />
       <HomepageLatestNews />
       <HomepageQuickAcces />
+      {/* <HomepageSidoarjoNetwork /> */}
     </main>
   );
 }
