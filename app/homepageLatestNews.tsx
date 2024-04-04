@@ -135,7 +135,7 @@ export const FeaturedArticle: React.FC<FeaturedArticleProps> = ({
         <AspectRatio ratio={1 / 1}>
           <Image
             fill
-            src={photo ? photo : "/images/hero.jpg"}
+            src={photo ? photo : "/hero.jpg"}
             alt="Media Sawocangkring"
             className="object-cover filter transition-all ease-brand duration-500 transform group-hover:scale-110 group-hover:filter-none group-hover:grayscale-0 group-hover:opacity-100 object-top"
           />
