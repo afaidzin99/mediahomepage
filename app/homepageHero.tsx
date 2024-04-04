@@ -88,7 +88,7 @@ export default function HomepageHero() {
                 </Button> */}
               </div>
             </div>
-            <ul className="flex w-full max-w-xl mt-4 justify-between gap-6">
+            <ul className="flex w-full max-w-xl mt-4 justify-evenly gap-6">
               {sosmedData.map((sosmed, index) => (
                 <li key={index} className="flex items-center">
                   <Link
