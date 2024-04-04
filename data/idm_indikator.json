@@ -1,0 +1,452 @@
+[
+  {
+    "no": "1",
+    "indikatoridm": "Skor Akses Sarkes",
+    "skor": "5",
+    "keterangan": "Waktu tempuh dari ≤ 30  Menit",
+    "kegiatanyangdapatdilakukan": "-",
+    "+nilai": "0.0000",
+    "category": "Social"
+  },
+  {
+    "no": "2",
+    "indikatoridm": "Skor Dokter",
+    "skor": "0",
+    "keterangan": "Jumlah Dokter Tidak ada",
+    "kegiatanyangdapatdilakukan": "Pengadaan Min 1 org Dokter",
+    "+nilai": "0.0095",
+    "category": "Social"
+  },
+  {
+    "no": "3",
+    "indikatoridm": "Skor Bidan",
+    "skor": "5",
+    "keterangan": "Jumlah bidan ≥ 1 orang",
+    "kegiatanyangdapatdilakukan": "-",
+    "+nilai": "0.0000",
+    "category": "Social"
+  },
+  {
+    "no": "4",
+    "indikatoridm": "Skor Nakes Lain",
+    "skor": "5",
+    "keterangan": "Jumlah tenaga kesehatan lainnya ≥ 5 orang",
+    "kegiatanyangdapatdilakukan": "-",
+    "+nilai": "0.0000",
+    "category": "Social"
+  },
+  {
+    "no": "5",
+    "indikatoridm": "Skor Tingkat Kepesertaan BPJS",
+    "skor": "4",
+    "keterangan": "Jumlah peserta BPJS/jumlah penduduk antara 0,6 s.d 0,75",
+    "kegiatanyangdapatdilakukan": "Fasilitasi kepesertaan BPJS warga Desa hingga > 75%",
+    "+nilai": "0.0019",
+    "category": "Social"
+  },
+  {
+    "no": "6",
+    "indikatoridm": "Skor Akses Poskesdes",
+    "skor": "5",
+    "keterangan": "Jarak tempuh menuju Poskesdes = 500 Meter",
+    "kegiatanyangdapatdilakukan": "-",
+    "+nilai": "0.0000",
+    "category": "Social"
+  },
+  {
+    "no": "7",
+    "indikatoridm": "Skor Aktivitas Posyandu",
+    "skor": "5",
+    "keterangan": "Jumlah Posyandu aktif 1 bulan sekali/ Jumlah Posyandu > 0,75",
+    "kegiatanyangdapatdilakukan": "-",
+    "+nilai": "0.0000",
+    "category": "Social"
+  },
+  {
+    "no": "8",
+    "indikatoridm": "Skor Akses SD/MI",
+    "skor": "5",
+    "keterangan": "Jarak tempuh menuju SD atau MI = 3000 Meter",
+    "kegiatanyangdapatdilakukan": "-",
+    "+nilai": "0.0000",
+    "category": "Social"
+  },
+  {
+    "no": "9",
+    "indikatoridm": "Skor Akses SMP/MTS",
+    "skor": "5",
+    "keterangan": "Jarak tempuh menuju SMP atau MTs ≤ 6000 Meter",
+    "kegiatanyangdapatdilakukan": "-",
+    "+nilai": "0.0000",
+    "category": "Social"
+  },
+  {
+    "no": "10",
+    "indikatoridm": "Skor Akses SMA/SMK",
+    "skor": "5",
+    "keterangan": "Jarak tempuh menuju SMU atau SMK ≤ 6000 Meter",
+    "kegiatanyangdapatdilakukan": "-",
+    "+nilai": "0.0000",
+    "category": "Social"
+  },
+  {
+    "no": "11",
+    "indikatoridm": "Skor Ketersediaan PAUD",
+    "skor": "5",
+    "keterangan": "Jumlah PAUD ≥ 1",
+    "kegiatanyangdapatdilakukan": "-",
+    "+nilai": "0.0000",
+    "category": "Social"
+  },
+  {
+    "no": "12",
+    "indikatoridm": "Skor Ketersediaan PKBM/ Paket ABC",
+    "skor": "1",
+    "keterangan": "Jumlah PKBM atau Paket ABC Tidak ada",
+    "kegiatanyangdapatdilakukan": "Pelaksanaan Kegiatan PKBM/Kejar Paket A B C",
+    "+nilai": "0.0076",
+    "category": "Social"
+  },
+  {
+    "no": "13",
+    "indikatoridm": "Skor Ketersediaan Kursus",
+    "skor": "1",
+    "keterangan": "Jumlah Pusat Keterampilan atau Kursus Tidak ada",
+    "kegiatanyangdapatdilakukan": "Pengadaan Tempat Kursus/Pelatihan",
+    "+nilai": "0.0076",
+    "category": "Social"
+  },
+  {
+    "no": "14",
+    "indikatoridm": "Skor Ketersediaan Taman Baca/ Perpus Desa",
+    "skor": "5",
+    "keterangan": "Taman Bacaan Masyarakat atau perpustakaan Desa tersedia",
+    "kegiatanyangdapatdilakukan": "-",
+    "+nilai": "0.0000",
+    "category": "Social"
+  },
+  {
+    "no": "15",
+    "indikatoridm": "Skor Kebiasaan Goryong",
+    "skor": "5",
+    "keterangan": "Terdapat Kebiasaan Gotong Royong",
+    "kegiatanyangdapatdilakukan": "-",
+    "+nilai": "0.0000",
+    "category": "Social"
+  },
+  {
+    "no": "16",
+    "indikatoridm": "Skor Frekuensi Goryong",
+    "skor": "3",
+    "keterangan": "Frekuensi Gotong Royong antara 1 s.d 2 kali",
+    "kegiatanyangdapatdilakukan": "Peningkatan Frekuensi Gotong Royong",
+    "+nilai": "0.0038",
+    "category": "Social"
+  },
+  {
+    "no": "17",
+    "indikatoridm": "Skor Ketersediaan Ruang Publik",
+    "skor": "5",
+    "keterangan": "Ruang Publik terdapat didesa",
+    "kegiatanyangdapatdilakukan": "-",
+    "+nilai": "0.0000",
+    "category": "Social"
+  },
+  {
+    "no": "18",
+    "indikatoridm": "Skor Kelompok OR",
+    "skor": "2",
+    "keterangan": "Jumlah kelompok kegiatan olahraga 2 s.d 3",
+    "kegiatanyangdapatdilakukan": "Penambahan Min 6 Kelp Olahraga",
+    "+nilai": "0.0057",
+    "category": "Social"
+  },
+  {
+    "no": "19",
+    "indikatoridm": "Skor Kegiatan OR",
+    "skor": "3",
+    "keterangan": "Jumlah kegiatan olahraga antara 4 s.d 5",
+    "kegiatanyangdapatdilakukan": "Pembangunan Min 4 Lap Olahraga",
+    "+nilai": "0.0038",
+    "category": "Social"
+  },
+  {
+    "no": "20",
+    "indikatoridm": "Skor Keragaman Agama",
+    "skor": "5",
+    "keterangan": "Jumlah Jenis Agama di Desa > 1",
+    "kegiatanyangdapatdilakukan": "-",
+    "+nilai": "0.0000",
+    "category": "Social"
+  },
+  {
+    "no": "21",
+    "indikatoridm": "Skor Keragaman Bahasa",
+    "skor": "5",
+    "keterangan": "Jumlah Bahasa yang digunakan sehari-hari > 1",
+    "kegiatanyangdapatdilakukan": "-",
+    "+nilai": "0.0000",
+    "category": "Social"
+  },
+  {
+    "no": "22",
+    "indikatoridm": "Skor Keragaman Komunikasi",
+    "skor": "5",
+    "keterangan": "Warga Desa terdiri dari Suku > 1",
+    "kegiatanyangdapatdilakukan": "-",
+    "+nilai": "0.0000",
+    "category": "Social"
+  },
+  {
+    "no": "23",
+    "indikatoridm": "Skor Poskamling",
+    "skor": "5",
+    "keterangan": "Terdapat Pos Keamanan  di Desa",
+    "kegiatanyangdapatdilakukan": "-",
+    "+nilai": "0.0000",
+    "category": "Social"
+  },
+  {
+    "no": "24",
+    "indikatoridm": "Skor Siskamling",
+    "skor": "5",
+    "keterangan": "Terdapat Sistem Keamanan Lingkungan warga di Desa",
+    "kegiatanyangdapatdilakukan": "-",
+    "+nilai": "0.0000",
+    "category": "Social"
+  },
+  {
+    "no": "25",
+    "indikatoridm": "Skor Konflik",
+    "skor": "5",
+    "keterangan": "Tidak terdapat atau tidak ada Konflik di Desa",
+    "kegiatanyangdapatdilakukan": "-",
+    "+nilai": "0.0000",
+    "category": "Social"
+  },
+  {
+    "no": "26",
+    "indikatoridm": "Skor PMKS",
+    "skor": "5",
+    "keterangan": "Jumlah PMKS  tidak ada atau 0",
+    "kegiatanyangdapatdilakukan": "-",
+    "+nilai": "0.0000",
+    "category": "Social"
+  },
+  {
+    "no": "27",
+    "indikatoridm": "Skor SLB",
+    "skor": "3",
+    "keterangan": "Jumlah Skor SLB antara 4 s.d 5",
+    "kegiatanyangdapatdilakukan": "Penanganan SLB",
+    "+nilai": "0.0038",
+    "category": "Social"
+  },
+  {
+    "no": "28",
+    "indikatoridm": "Skor Akses Listrik",
+    "skor": "5",
+    "keterangan": "(Jumlah Keluarga Memakai listrik + non Listrik/Jumlah keluarga memakai listrik) ≥ 0,9 )",
+    "kegiatanyangdapatdilakukan": "-",
+    "+nilai": "0.0000",
+    "category": "Social"
+  },
+  {
+    "no": "29",
+    "indikatoridm": "Skor Sinyal Tlp",
+    "skor": "5",
+    "keterangan": "Sinyal telepon seluler di Desa Kuat",
+    "kegiatanyangdapatdilakukan": "-",
+    "+nilai": "0.0000",
+    "category": "Social"
+  },
+  {
+    "no": "30",
+    "indikatoridm": "Skor Internet Kantor Desa",
+    "skor": "5",
+    "keterangan": "Terdapat fasilitas internet di kantor Desa",
+    "kegiatanyangdapatdilakukan": "-",
+    "+nilai": "0.0000",
+    "category": "Social"
+  },
+  {
+    "no": "31",
+    "indikatoridm": "Skor Akses Internet Warga",
+    "skor": "5",
+    "keterangan": "Terdapat Akses internet warga di Desa",
+    "kegiatanyangdapatdilakukan": "-",
+    "+nilai": "0.0000",
+    "category": "Social"
+  },
+  {
+    "no": "32",
+    "indikatoridm": "Skor Akses Jamban",
+    "skor": "5",
+    "keterangan": "Warga Desa BAB di Jamban Sendiri",
+    "kegiatanyangdapatdilakukan": "-",
+    "+nilai": "0.0000",
+    "category": "Social"
+  },
+  {
+    "no": "33",
+    "indikatoridm": "Skor Sampah",
+    "skor": "4",
+    "keterangan": "Warga desa membuang sampah di Lubang atau di Bakar",
+    "kegiatanyangdapatdilakukan": "Pembangunan TPS danTPA Sampah",
+    "+nilai": "0.0019",
+    "category": "Social"
+  },
+  {
+    "no": "34",
+    "indikatoridm": "Skor Air Minum",
+    "skor": "4",
+    "keterangan": "Sumber air minum berasal dari Sumur Bor/pompa, Sumur",
+    "kegiatanyangdapatdilakukan": "Pemasangan PDAM/Air Ledeng Tanpa Meteran",
+    "+nilai": "0.0019",
+    "category": "Social"
+  },
+  {
+    "no": "35",
+    "indikatoridm": "Skor Air Mandi & Cuci",
+    "skor": "4",
+    "keterangan": "Sumber air mandi dan cuci berasal dari Sumur Bor/pompa, Sumur",
+    "kegiatanyangdapatdilakukan": "Pemasangan PDAM/Air Ledeng Tanpa Meteran",
+    "+nilai": "0.0019",
+    "category": "Social"
+  },
+  {
+    "no": "1",
+    "indikatoridm": "Skor Keragaman Produksi",
+    "skor": "5",
+    "keterangan": "Jumlah Industri Mikro/ Jumlah KK ≥ 0,004",
+    "kegiatanyangdapatdilakukan": "-",
+    "+nilai": "0.0000",
+    "category": "Economy"
+  },
+  {
+    "no": "2",
+    "indikatoridm": "Skor Pertokoan",
+    "skor": "5",
+    "keterangan": "Jarak ke kelompok pertokoan terdekat ≤ 7 KM",
+    "kegiatanyangdapatdilakukan": "-",
+    "+nilai": "0.0000",
+    "category": "Economy"
+  },
+  {
+    "no": "3",
+    "indikatoridm": "Skor Pasar",
+    "skor": "1",
+    "keterangan": "(Total KK/jumlah pasar(permanen)) = 0",
+    "kegiatanyangdapatdilakukan": "Pembangunan Pasar Permanen",
+    "+nilai": "0.0222",
+    "category": "Economy"
+  },
+  {
+    "no": "4",
+    "indikatoridm": "Skor Toko/ Warung Kelontong",
+    "skor": "5",
+    "keterangan": "Jumlah Toko dan warung kelontong > 3",
+    "kegiatanyangdapatdilakukan": "-",
+    "+nilai": "0.0000",
+    "category": "Economy"
+  },
+  {
+    "no": "5",
+    "indikatoridm": "Skor Kedai & Penginapan",
+    "skor": "3",
+    "keterangan": "Jumlah Kedai dan Penginapan = 1",
+    "kegiatanyangdapatdilakukan": "Pembangunan 1 Unit Penginapan",
+    "+nilai": "0.0111",
+    "category": "Economy"
+  },
+  {
+    "no": "6",
+    "indikatoridm": "Skor POS & Logistik",
+    "skor": "3",
+    "keterangan": "Jumlah pos dan jasa logistik = 1",
+    "kegiatanyangdapatdilakukan": "Pembangunan/Pengadaan Jasa logistik / kantor Pos (Identifikasi yang tidak ada)",
+    "+nilai": "0.0111",
+    "category": "Economy"
+  },
+  {
+    "no": "7",
+    "indikatoridm": "Skor Bank & BPR",
+    "skor": "0",
+    "keterangan": "Jumlah bank dan BPR = 0",
+    "kegiatanyangdapatdilakukan": "Fasilitasi Pembangunan Bank Pemerintah, Swasta &/ BPR",
+    "+nilai": "0.0278",
+    "category": "Economy"
+  },
+  {
+    "no": "8",
+    "indikatoridm": "Skor Kredit",
+    "skor": "5",
+    "keterangan": "Jumlah fasilitas kredit = 4",
+    "kegiatanyangdapatdilakukan": "-",
+    "+nilai": "0.0000",
+    "category": "Economy"
+  },
+  {
+    "no": "9",
+    "indikatoridm": "Skor Lembaga Ekonomi",
+    "skor": "5",
+    "keterangan": "Jumlah koperasi aktif dan BUMDESA > 1",
+    "kegiatanyangdapatdilakukan": "-",
+    "+nilai": "0.0000",
+    "category": "Economy"
+  },
+  {
+    "no": "10",
+    "indikatoridm": "Skor Moda Transportasi Umum",
+    "skor": "1",
+    "keterangan": "Transportasi Umum tidak ada",
+    "kegiatanyangdapatdilakukan": "Fasilitasi Pengadaan Transportasi Umum dengan Trayek Tetap",
+    "+nilai": "0.0222",
+    "category": "Economy"
+  },
+  {
+    "no": "11",
+    "indikatoridm": "Skor Keterbukaan Wilayah",
+    "skor": "5",
+    "keterangan": "Jalan di Desa dilalui oleh kendaraan bermotor roda empat atau lebih Sepanjang Tahun",
+    "kegiatanyangdapatdilakukan": "-",
+    "+nilai": "0.0000",
+    "category": "Economy"
+  },
+  {
+    "no": "12",
+    "indikatoridm": "Skor Kualitas Jalan",
+    "skor": "5",
+    "keterangan": "Jenis permukaan jalan desa Aspal atau beton",
+    "kegiatanyangdapatdilakukan": "-",
+    "+nilai": "0.0000",
+    "category": "Economy"
+  },
+  {
+    "no": "1",
+    "indikatoridm": "Skor Kualitas Lingkungan",
+    "skor": "5",
+    "keterangan": "Pencemaran (air, udara, tanah, limbah disungai) di desa [jumlah pencemaran/4] = 0",
+    "kegiatanyangdapatdilakukan": "-",
+    "+nilai": "0.0000",
+    "category": "Environment"
+  },
+  {
+    "no": "2",
+    "indikatoridm": "Skor Rawan Bencana",
+    "skor": "5",
+    "keterangan": "Jenis bencana (longsor, banjir, kebakaran hutan) jenis bencana di desa = 0",
+    "kegiatanyangdapatdilakukan": "-",
+    "+nilai": "0.0000",
+    "category": "Environment"
+  },
+  {
+    "no": "3",
+    "indikatoridm": "Skor Tanggap Bencana",
+    "skor": "0",
+    "keterangan": "Fasilitas mitigasi/tanggap bencana (peringatan dini bencana alam, peringatan dini tsunami, perlengkapan keselamatan, jalur evakuasi) jumlah fasilitas mitigasi / tanggap bencana = 0",
+    "kegiatanyangdapatdilakukan": "Pembangunan/Pengadaan 3 Fasilitas Mitigasi Bencana Sesuai karakteristik wilayah (Kebutuhan sesuai hasil identifikasi kerawanan/potensi bencana)",
+    "+nilai": "0.1111",
+    "category": "Environment"
+  }
+]
