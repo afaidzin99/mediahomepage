@@ -2,6 +2,7 @@ import idm_indikator from "@/data/idm_indikator.json";
 import idm_summary from "@/data/idm_summary.json";
 import PageHeader from "@/components/ui/header";
 import PageContent from "@/components/ui/pageContent";
+import { Metadata } from "next";
 import Link from "next/link";
 import {
   Table,
@@ -11,6 +12,11 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+
+export const metadata: Metadata = {
+  title: "Indeks Desa Membangun Sawocangkring",
+  description: "Capaian Desa Sawocankring terhadap Indeks Desa Membangun",
+};
 
 export default function IndeksDesaMembangunPage() {
   const iks_count =
