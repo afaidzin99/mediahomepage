@@ -124,7 +124,7 @@ export default function Post({ params }: any) {
           </div>
         </section>
       </section>
-      <section id="content" className="bg-gray-200">
+      <section id="content" className="bg-white">
         <div className="container mx-auto px-6 py-8 2xl:px-0 xl:max-w-7xl relative">
           <MdxRender frontMatter={props.frontMatter} source={props.content} />
         </div>
