@@ -70,6 +70,13 @@ const availableStatistic = [
     image: "/medialogo.png",
   },
   {
+    title: "Indeks Desa Membangung",
+    description:
+      "Capaian Desa Sawocangkring terhadap Indeks Desa Membangun (IDM).",
+    url: "/statistik/idm",
+    image: "/medialogo.png",
+  },
+  {
     title: "Pemilihan Umum 2024",
     description: "Data Capaian PEMILU 2024 di Desa Sawocangkring.",
     url: "https://rekap-pemilu2024-swc.internal.reng.my.id",
