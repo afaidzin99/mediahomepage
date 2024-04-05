@@ -39,6 +39,9 @@ jobs:
       - name: Install Vercel CLI
         run: pnpm i -g vercel@latest
 
+      - name: Install Project Dev Dependencies
+        run: pnpm install --dev --frozen-lockfile
+
       - name: Fetch Data from External API
         run: pnpm run fetchdata
 
