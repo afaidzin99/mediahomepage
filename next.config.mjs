@@ -32,7 +32,7 @@ const nextConfig = {
             "connect-src":
               "'self' *.googletagmanager.com *.google-analytics.com sid.kemendesa.go.id",
             "img-src":
-              "'self' data: *.ytimg.com *.tableau.com is3.cloudhost.id *.tile.openstreetmap.org",
+              "'self' data: *.ytimg.com *.tableau.com is3.cloudhost.id *.tile.openstreetmap.org *.bmkg.go.id",
             "frame-ancestors": "'self' *.kemendesa.go.id",
           },
           frameoptions: false,
