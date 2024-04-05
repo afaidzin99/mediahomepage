@@ -39,6 +39,9 @@ jobs:
       - name: Install Vercel CLI
         run: pnpm i -g vercel@latest
 
+      - name: Fetch Data from External API
+        run: pnpm run fetchdata
+
       - name: Pull Vercel Environment Information
         run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
 
