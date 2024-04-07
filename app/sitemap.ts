@@ -24,6 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const routesNews = posts.map((post) => ({
     url: `${URL}/berita/${post.slug}`,
     lastModified: new Date().toISOString(),
+    changefreq: "weekly",
   }));
 
   // Static pages
