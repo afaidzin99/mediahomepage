@@ -1,5 +1,6 @@
 import PageHeader from "@/components/ui/header";
 import PageContent from "@/components/ui/pageContent";
+import GeoFileExtract from "./goespatialdata";
 import dynamic from "next/dynamic";
 
 const Map = dynamic(async () => await import("./maps"), {
@@ -24,6 +25,7 @@ export default function PetaDesa() {
           <div className="h-[320px] lg:h-[720px]">
             <Map />
           </div>
+          <GeoFileExtract />
           <p className="pt-8 text-sm">
             Data diperoleh melalui API Openstreetmap dengan penyesuaian pada
             objek - objek vital milik Desa Sawocangkring. Dikurasi secara
