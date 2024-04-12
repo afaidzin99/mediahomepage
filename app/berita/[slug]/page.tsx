@@ -50,6 +50,16 @@ export async function generateMetadata(
   return {
     title: frontMatter.title,
     description: content.split(" ").slice(0, 20).join(" "),
+    openGraph: {
+      title: frontMatter.title,
+      description: content.split(" ").slice(0, 20).join(" "),
+      images: [
+        {
+          url: frontMatter.image,
+          alt: frontMatter.title,
+        },
+      ],
+    },
   };
 }
 
