@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Media Informasi Desa Sawocangkring
 
-## Getting Started
+![MediaSawocangkring](/docs/homepage.png)
 
-First, run the development server:
+## Selayang Pandang
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Media Informasi Desa Sawocangkring adalah sebuah aplikasi berbasis web yang menyediakan informasi seputar Desa Sawocangkring. Aplikasi ini dibuat dengan tujuan untuk memudahkan masyarakat Desa Sawocangkring dalam mendapatkan informasi seputar desa mereka sendiri melalui jaringan internet. Aplikasi ini berorientasi pada keterbukaan informasi lintas organisasi dari badan pemerintahan desa.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Aplikasi ini dikembangkan sebagai salah satu bentuk kepedulian terhadap pemanfaatan teknologi informasi dalam mendukung pemerintahan desa yang lebih transparan dan akuntabel. Aplikasi ini juga diharapkan dapat menjadi contoh bagi desa-desa lainnya dalam memanfaatkan teknologi informasi dalam mendukung pemerintahan desa yang lebih baik.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Fitur Aplikasi
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Aplikasi ini memiliki beberapa fitur utama, antara lain:
 
-## Learn More
+1. **Berita Desa**: Menampilkan berita-berita terbaru seputar Desa Sawocangkring.
+2. **Profil Desa**: Menampilkan profil Desa Sawocangkring.
+3. **Galeri**: Menampilkan galeri foto-foto kegiatan di Desa Sawocangkring.
+4. **Peta Desa**: Menampilkan peta Desa Sawocangkring.
+5. **Statistik**: Menampilkan informasi statistik dari Desa Sawocangkring.
 
-To learn more about Next.js, take a look at the following resources:
+## Teknologi yang Digunakan
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| App/Service                              | Description        |
+| ---------------------------------------- | ------------------ |
+| [Next.js](https://nextjs.org/)           | Frontend Framework |
+| [Tailwind CSS](https://tailwindcss.com/) | Web Styling        |
+| [Vercel](https://vercel.com/)            | Vercel             |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Tim Pengembang
 
-## Deploy on Vercel
+| Nama Lengkap           | RT/RW   | Role            |
+| ---------------------- | ------- | --------------- |
+| Rengga Prakoso Nugroho | 17 / 03 | System Engineer |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Lisensi
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Dokumentasi aplikasi ini di folder `asset`, `public`, `docs`, dan `data` dilisensikan di bawah [lisensi CC BY-NC-SA 4.0](/LICENSE).
+
+Semua kode lain di repositori ini dilisensikan di bawah [lisensi GNU GPLv3](/LICENSE-CODE).
+
+Jangan ragu untuk mengkloning dan memodifikasi aplikasi sesuai keinginan, tetapi jangan lupa untuk menambahkan referensi kepada kami sebagai pengembangnya.
+
+## Catatan Penting
+
+Aplikasi ini merupakan aplikasi yang dikembangkan oleh warga Desa Sawocangkring. Aplikasi ini tidak bertujuan untuk kepentingan komersial, namun hanya untuk kepentingan pemberdayaan desa. Aplikasi ini dikelola dibawah infrastruktur tim Media Sawocangkring. Dalam proses manajemen proyek ini, [Rengga Prakoso Nugroho](https://renggaprakosonugroho.my.id) bertindak sebagai fasilitator yang bertanggung jawab atas pengelolaan proyek dan pengembangan aplikasi ini.
+
+Tim Media Sawocangkring tidak bertanggung jawab atas segala bentuk kerugian yang ditimbulkan oleh penggunaan aplikasi ini. Penggunaan aplikasi ini sepenuhnya menjadi tanggung jawab pengguna.
