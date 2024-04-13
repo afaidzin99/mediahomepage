@@ -42,6 +42,15 @@ jobs:
       - name: Install Project Dev Dependencies
         run: pnpm install --dev --frozen-lockfile
 
+      - name: Push files
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.PROXY_BACKEND_FTP_URL }}
+          username: ${{ secrets.PROXY_BACKEND_FTP_USERNAME }}
+          password: ${{ secrets.PROXY_BACKEND_FTP_PASSWORD }}
+          protocol: ftps
+          local-dir: ./backend/proxy
+
       - name: Fetch Data from External API
         run: pnpm run fetchdata
 
