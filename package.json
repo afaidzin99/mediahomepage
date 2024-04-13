@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "fetchdata": "node ./lib/sidesa.js && node ./lib/indeksdesamembangun.js",
+    "fetchdata": "node ./lib/populasidesa.js && node ./lib/indeksdesamembangun.js",
     "build": "next build",
     "postbuild": "next-sitemap --config sitemap.config.js",
     "start": "next start",
@@ -49,6 +49,7 @@
     "autoprefixer": "^10.0.1",
     "axios": "^1.6.8",
     "cheerio": "1.0.0-rc.12",
+    "dotenv": "^16.4.5",
     "eslint": "^8",
     "eslint-config-next": "14.1.0",
     "postcss": "^8",
