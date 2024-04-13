@@ -49,7 +49,7 @@ jobs:
           username: ${{ secrets.PROXY_BACKEND_FTP_USERNAME }}
           password: ${{ secrets.PROXY_BACKEND_FTP_PASSWORD }}
           protocol: ftps
-          local-dir: ./backend/proxy
+          local-dir: ./backend/proxy/
 
       - name: Fetch Data from External API
         run: pnpm run fetchdata
