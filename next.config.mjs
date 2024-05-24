@@ -12,6 +12,11 @@ const nextConfig = {
         hostname: "is3.cloudhost.id",
         port: "",
       },
+      {
+        protocol: "http",
+        hostname: "sawocangkring-wonoayu.desa.id",
+        port: "",
+      },
     ],
   },
   // Configure `pageExtensions`` to include MDX files
@@ -32,7 +37,7 @@ const nextConfig = {
             "connect-src":
               "'self' *.googletagmanager.com *.google-analytics.com sid.kemendesa.go.id",
             "img-src":
-              "'self' data: *.ytimg.com *.tableau.com is3.cloudhost.id *.tile.openstreetmap.org *.bmkg.go.id",
+              "'self' data: http://sawocangkring-wonoayu.desa.id *.ytimg.com *.tableau.com is3.cloudhost.id *.tile.openstreetmap.org *.bmkg.go.id",
             "frame-ancestors": "'self' *.kemendesa.go.id",
           },
           frameoptions: false,
