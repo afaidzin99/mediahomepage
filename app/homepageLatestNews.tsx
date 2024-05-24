@@ -46,14 +46,23 @@ export default function HomepageLatestNews() {
   const blogDir = "data/berita";
   const files = fs.readdirSync(path.join(blogDir));
 
-  const blogs = files.map((filename) => {
-    const fileContent = fs.readFileSync(path.join(blogDir, filename), "utf-8");
-    const { data: frontMatter } = matter(fileContent);
-    return {
-      meta: frontMatter,
-      slug: filename.replace(".mdx", ""),
-    };
-  });
+  const blogs = files
+    .map((filename) => {
+      const fileContent = fs.readFileSync(
+        path.join(blogDir, filename),
+        "utf-8"
+      );
+      const { data: frontMatter } = matter(fileContent);
+      return {
+        meta: frontMatter,
+        slug: filename.replace(".mdx", ""),
+      };
+    })
+    .sort((a, b) => {
+      const dateA = new Date(a.meta.date);
+      const dateB = new Date(b.meta.date);
+      return dateB.getTime() - dateA.getTime(); // For descending order
+    });
   return (
     <section className="relative  top-[-12rem] mb-[-12rem] md:top-[-14rem] md:mb-[-14rem] lg:-top-40 lg:-mb-40 z-10 pb-6 md:pb-8 xl:pb-12">
       <div className="container mx-auto px-6 2xl:px-0 xl:max-w-7xl">
