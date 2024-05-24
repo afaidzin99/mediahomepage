@@ -77,6 +77,12 @@ const availableStatistic = [
     image: "/medialogo.png",
   },
   {
+    title: "Anggaran Pendapatan Belanja Desa",
+    description: "Data APBDes Desa Sawocangkring, data perencanaan.",
+    url: "/statistik/apbdes",
+    image: "/medialogo.png",
+  },
+  {
     title: "Prakiraan Cuaca",
     description:
       "Prakiraan cuaca dan data cuaca terkini di Kabupaten Sidoarjo.",
@@ -87,13 +93,6 @@ const availableStatistic = [
     title: "Pemilihan Umum 2024",
     description: "Data Capaian PEMILU 2024 di Desa Sawocangkring.",
     url: "https://rekap-pemilu2024-swc.internal.reng.my.id",
-    image: "/medialogo.png",
-  },
-  {
-    title: "To Be Added",
-    description:
-      "Statistik lainnya yang akan ditambahkan. Contoh: Ekonomi, Data Geospasial, dll.",
-    url: "#",
     image: "/medialogo.png",
   },
 ];

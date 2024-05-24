@@ -1,0 +1,31 @@
+{
+  "pendapatan_desa": {
+    "pendapatan_asli_desa": 101100000,
+    "dana_desa": 1018824000,
+    "bagi_hasil_pajak": 377489349,
+    "alokasi_dana_desa": 445030661,
+    "pendapatan_lain_lain": 34000000
+  },
+  "belanja_desa": {
+    "b_penyelenggaraan_pemerintah_desa": 1063658502,
+    "b_pelaksanan_pembangunan_desa": 543646951,
+    "b_pembinaan_kemasyarakatan": 199640511,
+    "b_pemberdayaan_kemasyarakatan": 98300000,
+    "b_penanggulangan_bencana_darurat_dan_mendesak": 182000000
+  },
+  "pembiayaan": {
+    "silpa_tahun_sebelumnya": 160801954,
+    "penyertaan_modal_desa": 50000000,
+    "pembiayaan_netto": 110801954
+  },
+  "update": {
+    "date": "02 januari 2024",
+    "source": "Situs Web Desa Sawocangkring",
+    "url": "http://sawocangkring-wonoayu.desa.id/index.php/artikel/2024/1/2/anggaran-pendapatan-dan-belanja-desa-tahun-2024"
+  },
+  "archive": {
+    "date": "20 Mei 2024",
+    "source": "Wayback Machine",
+    "url": "https://web.archive.org/web/20240521044719/http://sawocangkring-wonoayu.desa.id/index.php/artikel/2024/1/2/anggaran-pendapatan-dan-belanja-desa-tahun-2024"
+  }
+}
