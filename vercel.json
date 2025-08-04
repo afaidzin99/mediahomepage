@@ -1,6 +1,6 @@
 {
-  "build": {
-    "installCommand": "pnpm install",
-    "command": "pnpm run build"
-  }
+  "buildCommand": "npm run build",
+  "installCommand": "npm install",
+  "outputDirectory": ".next",
+  "rootDirectory": "FrontEnd"
 }
