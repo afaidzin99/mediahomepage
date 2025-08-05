@@ -18,7 +18,7 @@ export default function EditBerita({ params }: { params: { slug: string } }) {
     async function fetchBerita() {
       try {
         const res = await fetch(
-          `http://localhost:8000/api/berita/${params.slug}`
+          `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/berita/${params.slug}`
         );
         const data = await res.json();
         console.log("DATA:", data);
@@ -45,7 +45,7 @@ export default function EditBerita({ params }: { params: { slug: string } }) {
 
     try {
       const res = await fetch(
-        `http://localhost:8000/api/berita/${params.slug}`,
+        `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/berita/${params.slug}`,
         {
           method: "PUT",
           headers: {

@@ -41,7 +41,7 @@ if (form.image_url instanceof File) {
   formData.append("image", form.image_url);
 }
 
-const res = await fetch("http://localhost:8000/api/berita", {
+const res = await fetch("${process.env.NEXT_PUBLIC_API_BASE_URL}/api/berita", {
   method: "POST",
   body: formData, // ⬅️ kirim FormData, tanpa headers manual
 });

@@ -39,7 +39,7 @@ export default function HomepageLatestNews() {
 
   useEffect(() => {
   const fetchBlogs = async () => {
-    const res = await fetch("http://localhost:8000/api/berita", {
+    const res = await fetch("${process.env.NEXT_PUBLIC_API_BASE_URL}/api/berita", {
       cache: "no-store",
     });
     const json = await res.json();

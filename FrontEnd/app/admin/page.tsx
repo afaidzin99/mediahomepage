@@ -21,7 +21,7 @@ export default function AdminDashboard() {
   useEffect(() => {
     async function fetchBerita() {
       try {
-        const res = await fetch("http://localhost:8000/api/berita");
+        const res = await fetch("${process.env.NEXT_PUBLIC_API_BASE_URL}/api/berita");
         const data = await res.json();
         setBeritaList(data.data); // pastikan ini sesuai struktur API
       } catch (err) {
@@ -39,7 +39,7 @@ export default function AdminDashboard() {
     if (!confirmDelete) return;
 
     try {
-      const res = await fetch(`http://localhost:8000/api/berita/${slug}`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/berita/${slug}`, {
         method: "DELETE",
       });
 

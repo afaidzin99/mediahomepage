@@ -9,7 +9,7 @@ export default function Home() {
   useEffect(() => {
     async function fetchBlogs() {
       try {
-        const res = await fetch("http://localhost:8000/api/berita");
+        const res = await fetch("${process.env.NEXT_PUBLIC_API_BASE_URL}/api/berita");
         const data = await res.json();
         console.log("Hasil dari API:", data); // Tambahkan ini
         setBlogs(data.data);
